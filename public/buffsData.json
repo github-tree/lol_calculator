@@ -1,0 +1,17 @@
+[
+  {
+    "id": "1",
+    "name": "红",
+    "image": "/buff/hong.png"
+  },
+  {
+    "id": "2",
+    "name": "蓝",
+    "image": "/buff/lan.png"
+  },
+  {
+    "id": "3",
+    "name": "大龙",
+    "image": "/buff/dalong.png"
+  }
+]

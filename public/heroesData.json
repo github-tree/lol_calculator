@@ -1,0 +1,36 @@
+[
+  {
+    "id": "1",
+    "name": "剑魔",
+    "image": "/hero/10001.png",
+    "abilities": [
+      {
+        "id": "1",
+        "name": "技能1",
+        "damage": 50
+      },
+      {
+        "id": "2",
+        "name": "技能2",
+        "damage": 100
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "阿狸",
+    "image": "/hero/10002.png",
+    "abilities": [
+      {
+        "id": "3",
+        "name": "技能3",
+        "damage": 75
+      },
+      {
+        "id": "4",
+        "name": "技能4",
+        "damage": 120
+      }
+    ]
+  }
+]

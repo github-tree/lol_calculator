@@ -1,0 +1,17 @@
+[
+  {
+    "id": "1",
+    "name": "装备1",
+    "image": "item1.jpg"
+  },
+  {
+    "id": "2",
+    "name": "装备2",
+    "image": "item2.jpg"
+  },
+  {
+    "id": "3",
+    "name": "装备3",
+    "image": "item3.jpg"
+  }
+]
