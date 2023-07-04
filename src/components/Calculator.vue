@@ -4,66 +4,69 @@ import SelectHero from './SelectHero.vue';
 
 <template>
   <div class="app">
-    <h2>伤害计算器</h2>
+    <h2>计算器</h2>
 
     <div>
       <span>己方英雄</span>
-      <button @click="openSelectHeroA">选择英雄</button>
+      <div class="select-hero-button" @click="openSelectHeroA">
+        <div v-if="heroA.name">
+          <img :src="heroA.image" :alt="heroA.name" />
+        </div>
+      </div>
+      <div>{{ heroA.name }}</div>
 
       <SelectHero v-if="selectHeroAShow" :items="heroes" @select="selcetHeroA"/>
 
-      <div v-if="heroA.name">
-        <img :src="heroA.image" :alt="heroA.name" />
-        <span>{{ heroA.name }}</span>
+      <div>
+        <span>等级：</span>
+        <input type="number"  v-model="heroA.lv" @input="changeLv(heroA)"/>
       </div>
-
-      <span>等级：</span>
-      <input type="number"  v-model="heroA.lv" @input="changeLv(heroA)"/>
-
 
     </div>
 
     <div>
       <span>敌方英雄</span>
-      <button @click="openSelectHeroB">选择英雄</button>
+      <div class="select-hero-button" @click="openSelectHeroB">
+        <div v-if="heroB.name">
+          <img :src="heroB.image" :alt="heroB.name" />
+        </div>
+      </div>
+      <div>{{ heroB.name }}</div>
 
       <SelectHero v-if="selectHeroBShow" :items="heroes" @select="selcetHeroB"/>
 
-      <div v-if="heroB.name">
-        <img :src="heroB.image" :alt="heroB.name" />
-        <span>{{ heroB.name }}</span>
+      <div>
+        <span>等级：</span>
+        <input type="number" v-model="heroB.lv"  @input="changeLv(heroB)"/>
       </div>
 
-      <span>等级：</span>
-      <input type="number" v-model="heroB.lv"  @input="changeLv(heroB)"/>
-
     </div>
 
-    <button @click="calculateDamage">计算伤害</button>
+    <button @click="calculateDamage">计算</button>
 
     <div>
-      <h3>普通攻击伤害</h3>
-      <p>{{ damageData.a }}</p>
+      <span>普通攻击伤害：</span>
+      <span>{{ damageData.a }}</span>
     </div>
 
     <div>
-      <h3>Q 技能伤害</h3>
-      <p>{{ damageData.q }}</p>
+      <span>Q 技能伤害：</span>
+      <span>{{ damageData.q }}</span>
     </div>
 
     <div>
-      <h3>W 技能伤害</h3>
-      <p>{{ damageData.w }}</p>
+      <span>W 技能伤害：</span>
+      <span>{{ damageData.w }}</span>
     </div>
 
     <div>
-      <h3>E 技能伤害</h3>
-      <p>{{ damageData.e }}</p>
+      <span>E 技能伤害：</span>
+      <span>{{ damageData.e }}</span>
     </div>
 
     <div>
-      <h3>R 技能伤害</h3>
-      <p>{{ damageData.r }}</p>
+      <span>R 技能伤害：</span>
+      <span>{{ damageData.r }}</span>
     </div>
   </div>
 </template>
@@ -164,40 +167,16 @@ export default defineComponent({
 <style scoped>
 .app {
   text-align: center;
-}
-
-.dialog {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.dialog-content {
-  background-color: #fff;
-  padding: 20px;
+.select-hero-button{
+  border:1px #ffffff solid;
+  width: 82px;
+  height: 82px;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  cursor: pointer;
-}
-
-img {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
+.select-hero-button img{
+  width: 80px;
 }
 </style>

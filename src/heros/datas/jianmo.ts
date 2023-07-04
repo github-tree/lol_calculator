@@ -22,14 +22,17 @@ const d = [
     hp:650,
     mp:0,
     attackRange:175,
-    up_ad:5,
-    up_hp:114,
-    up_hp5:1,
-    up_ar:4.45,
-    up_mr:2.05,
   },
 
 ] as HeroData[]
+
+const up = {
+  up_ad:5,
+  up_hp:114,
+  up_hp5:1,
+  up_ar:4.45,
+  up_mr:2.05,
+}
 
 const q = {
   t:1,//j + b * ap
@@ -40,7 +43,7 @@ const q = {
 
 const Timo: HeroModel = {
   data: {} as HeroData,
-  name: "提莫",
+  name: "剑魔",
   lv:1,
   image:"",
   q() {
@@ -67,6 +70,8 @@ const Timo: HeroModel = {
     console.log(`Method 4 called by ${this.name}`);
   },
   setLv(lv){
+    let data : HeroData = d[0]
+    
     this.data = d[lv]
   },
 };
