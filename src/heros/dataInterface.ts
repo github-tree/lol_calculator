@@ -24,6 +24,8 @@ export interface HeroData {
 export interface HeroModel {
     data:HeroData
     name: string;
+    image:string;
+    lv:number;
     q(): void;
     w(): void;
     e(): void;

@@ -25,6 +25,8 @@ const q = {
 const Timo: HeroModel = {
   data: {} as HeroData,
   name: "提莫",
+  lv:1,
+  image:"",
   q() {
     if (this.data.qL === 0){
       return 0;
