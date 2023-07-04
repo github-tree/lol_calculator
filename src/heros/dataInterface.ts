@@ -1,15 +1,13 @@
 export interface HeroData {
     lv:number;
-    qL:number;
-    wL:number;
-    eL:number;
-    rL:number;
     ad:number;
     ap:number;
     ar:number;
     mr:number;
-    crit:number;    //攻速
-    as:number;      //暴击
+    crit:number;    //暴击
+    critD:number;    //暴击伤害
+    as:number;      //攻速
+    attackWindup:number;//攻速收益
     haste:number;   //技能急速
     speed:number;
     mPen:number;
@@ -19,7 +17,14 @@ export interface HeroData {
     mp:number;
     hp5:number;
     mp5:number;
+    attackRange:number;
+    up_ad:number;
+    up_hp:number;
+    up_hp5:number;
+    up_ar:number;
+    up_mr:number;
 }
+
 
 export interface HeroModel {
     data:HeroData

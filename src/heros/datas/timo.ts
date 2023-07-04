@@ -2,17 +2,25 @@ import type {HeroData, HeroModel} from "@/heros/dataInterface";
 import {plan1} from "@/heros/plan";
 
 const d = [
-  {lv:1, qL:0,wL:0,eL:0,rL:0, ad:54, ap:0, ar:24,mr:30, crit:0,as:0,haste:0,speed:330,mPen:0,mPenPercentage:0,lethality:0,hp5:5.5,mp5:9.6,hp:0,mp:0,},
-  {lv:1, qL:1,wL:0,eL:0,rL:0, ad:54, ap:0, ar:24,mr:30, crit:0,as:0,haste:0,speed:330,mPen:0,mPenPercentage:0,lethality:0,hp5:5.5,mp5:9.6,hp:0,mp:0,},
-  {lv:2, qL:0,wL:0,eL:0,rL:0, ad:54, ap:0, ar:24,mr:30, crit:0,as:0,haste:0,speed:330,mPen:0,mPenPercentage:0,lethality:0,hp5:5.5,mp5:9.6,hp:0,mp:0,},
-  {lv:3, qL:0,wL:0,eL:0,rL:0, ad:54, ap:0, ar:24,mr:30, crit:0,as:0,haste:0,speed:330,mPen:0,mPenPercentage:0,lethality:0,hp5:5.5,mp5:9.6,hp:0,mp:0,},
-  {lv:4, qL:0,wL:0,eL:0,rL:0, ad:54, ap:0, ar:24,mr:30, crit:0,as:0,haste:0,speed:330,mPen:0,mPenPercentage:0,lethality:0,hp5:5.5,mp5:9.6,hp:0,mp:0,},
-  {lv:5, qL:0,wL:0,eL:0,rL:0, ad:54, ap:0, ar:24,mr:30, crit:0,as:0,haste:0,speed:330,mPen:0,mPenPercentage:0,lethality:0,hp5:5.5,mp5:9.6,hp:0,mp:0,},
-  {lv:6, qL:0,wL:0,eL:0,rL:0, ad:54, ap:0, ar:24,mr:30, crit:0,as:0,haste:0,speed:330,mPen:0,mPenPercentage:0,lethality:0,hp5:5.5,mp5:9.6,hp:0,mp:0,},
-  {lv:7, qL:0,wL:0,eL:0,rL:0, ad:54, ap:0, ar:24,mr:30, crit:0,as:0,haste:0,speed:330,mPen:0,mPenPercentage:0,lethality:0,hp5:5.5,mp5:9.6,hp:0,mp:0,},
-  {lv:8, qL:0,wL:0,eL:0,rL:0, ad:54, ap:0, ar:24,mr:30, crit:0,as:0,haste:0,speed:330,mPen:0,mPenPercentage:0,lethality:0,hp5:5.5,mp5:9.6,hp:0,mp:0,},
-  {lv:9, qL:0,wL:0,eL:0,rL:0, ad:54, ap:0, ar:24,mr:30, crit:0,as:0,haste:0,speed:330,mPen:0,mPenPercentage:0,lethality:0,hp5:5.5,mp5:9.6,hp:0,mp:0,},
-  {lv:10, qL:0,wL:0,eL:0,rL:0, ad:54, ap:0, ar:24,mr:30, crit:0,as:0,haste:0,speed:330,mPen:0,mPenPercentage:0,lethality:0,hp5:5.5,mp5:9.6,hp:0,mp:0,},
+  {lv:1, ad:54, ap:0, ar:24,mr:30, crit:0,as:0,haste:0,speed:330,mPen:0,mPenPercentage:0,lethality:0,hp5:5.5,mp5:9.6,hp:0,mp:0,},
+  {lv:1, ad:54, ap:0, ar:24,mr:30, crit:0,as:0,haste:0,speed:330,mPen:0,mPenPercentage:0,lethality:0,hp5:5.5,mp5:9.6,hp:0,mp:0,},
+  {lv:2, ad:54, ap:0, ar:24,mr:30, crit:0,as:0,haste:0,speed:330,mPen:0,mPenPercentage:0,lethality:0,hp5:5.5,mp5:9.6,hp:0,mp:0,},
+  {lv:3, ad:54, ap:0, ar:24,mr:30, crit:0,as:0,haste:0,speed:330,mPen:0,mPenPercentage:0,lethality:0,hp5:5.5,mp5:9.6,hp:0,mp:0,},
+  {lv:4, ad:54, ap:0, ar:24,mr:30, crit:0,as:0,haste:0,speed:330,mPen:0,mPenPercentage:0,lethality:0,hp5:5.5,mp5:9.6,hp:0,mp:0,},
+  {lv:5, ad:54, ap:0, ar:24,mr:30, crit:0,as:0,haste:0,speed:330,mPen:0,mPenPercentage:0,lethality:0,hp5:5.5,mp5:9.6,hp:0,mp:0,},
+  {lv:6, ad:54, ap:0, ar:24,mr:30, crit:0,as:0,haste:0,speed:330,mPen:0,mPenPercentage:0,lethality:0,hp5:5.5,mp5:9.6,hp:0,mp:0,},
+  {lv:7, ad:54, ap:0, ar:24,mr:30, crit:0,as:0,haste:0,speed:330,mPen:0,mPenPercentage:0,lethality:0,hp5:5.5,mp5:9.6,hp:0,mp:0,},
+  {lv:8, ad:54, ap:0, ar:24,mr:30, crit:0,as:0,haste:0,speed:330,mPen:0,mPenPercentage:0,lethality:0,hp5:5.5,mp5:9.6,hp:0,mp:0,},
+  {lv:9, ad:54, ap:0, ar:24,mr:30, crit:0,as:0,haste:0,speed:330,mPen:0,mPenPercentage:0,lethality:0,hp5:5.5,mp5:9.6,hp:0,mp:0,},
+  {lv:10, ad:54, ap:0, ar:24,mr:30, crit:0,as:0,haste:0,speed:330,mPen:0,mPenPercentage:0,lethality:0,hp5:5.5,mp5:9.6,hp:0,mp:0,},
+  {lv:11, ad:54, ap:0, ar:24,mr:30, crit:0,as:0,haste:0,speed:330,mPen:0,mPenPercentage:0,lethality:0,hp5:5.5,mp5:9.6,hp:0,mp:0,},
+  {lv:12, ad:54, ap:0, ar:24,mr:30, crit:0,as:0,haste:0,speed:330,mPen:0,mPenPercentage:0,lethality:0,hp5:5.5,mp5:9.6,hp:0,mp:0,},
+  {lv:13, ad:54, ap:0, ar:24,mr:30, crit:0,as:0,haste:0,speed:330,mPen:0,mPenPercentage:0,lethality:0,hp5:5.5,mp5:9.6,hp:0,mp:0,},
+  {lv:14, ad:54, ap:0, ar:24,mr:30, crit:0,as:0,haste:0,speed:330,mPen:0,mPenPercentage:0,lethality:0,hp5:5.5,mp5:9.6,hp:0,mp:0,},
+  {lv:15, ad:54, ap:0, ar:24,mr:30, crit:0,as:0,haste:0,speed:330,mPen:0,mPenPercentage:0,lethality:0,hp5:5.5,mp5:9.6,hp:0,mp:0,},
+  {lv:16, ad:54, ap:0, ar:24,mr:30, crit:0,as:0,haste:0,speed:330,mPen:0,mPenPercentage:0,lethality:0,hp5:5.5,mp5:9.6,hp:0,mp:0,},
+  {lv:17, ad:54, ap:0, ar:24,mr:30, crit:0,as:0,haste:0,speed:330,mPen:0,mPenPercentage:0,lethality:0,hp5:5.5,mp5:9.6,hp:0,mp:0,},
+  {lv:18, ad:154, ap:0, ar:24,mr:30, crit:0,as:0,haste:0,speed:330,mPen:0,mPenPercentage:0,lethality:0,hp5:5.5,mp5:9.6,hp:0,mp:0,},
 ] as HeroData[]
 
 const q = {

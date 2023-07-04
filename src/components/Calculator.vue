@@ -18,7 +18,7 @@ import SelectHero from './SelectHero.vue';
       </div>
 
       <span>等级：</span>
-      <input type="number" v-model="heroA.lv" />
+      <input type="number"  v-model="heroA.lv" @input="changeLv(heroA)"/>
 
 
     </div>
@@ -35,7 +35,7 @@ import SelectHero from './SelectHero.vue';
       </div>
 
       <span>等级：</span>
-      <input type="number" v-model="heroB.lv" />
+      <input type="number" v-model="heroB.lv"  @input="changeLv(heroB)"/>
 
     </div>
 
@@ -133,22 +133,24 @@ export default defineComponent({
       this.selectHeroBShow = false;
     },
 
-    selcetHeroA(item) {
-      this.selected = item;
+    selcetHeroA(item:any) {
       this.heroA = getHero(item.model_key);
       this.heroA.setLv(1)
-      this.heroA.image = this.selected.image
+      this.heroA.image = item.image
       this.closeSelectHeroA();
     },
-    selcetHeroB(item) {
-      this.selected = item;
+    selcetHeroB(item:any) {
       this.heroB = getHero(item.model_key);
       this.heroB.setLv(1)
-      this.heroB.image = this.selected.image
+      this.heroB.image = item.image
       this.closeSelectHeroB();
+    },
+    changeLv(heroModel:HeroModel){
+      heroModel.setLv(heroModel.lv)
     },
     calculateDamage() {
       // 实现伤害计算的逻辑
+
       let ar = 0
       if (ar >= 0){
         this.damageData.a = (100/(100+this.heroB.data.ar) * this.heroA.data.ad).toFixed(2)

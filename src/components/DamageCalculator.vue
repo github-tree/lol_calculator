@@ -28,7 +28,7 @@ import MultiSelect from './MultiSelect.vue';
       </div>
 
       <h3>等级</h3>
-      <input type="number" v-model="level" />
+      <input type="number" v-model="level"/>
 
       <h3>装备</h3>
       <button @click="selectItems">选择装备</button>
